@@ -43,7 +43,7 @@ export default function AdminPage() {
   useEffect(() => {
     // If user is not admin, redirect them
     if (!loading && (!user || !isAdmin)) {
-      router.push("/(auth)/sign-in");
+      router.push("/sign-in");
     }
   }, [loading, user, isAdmin, router]);
 

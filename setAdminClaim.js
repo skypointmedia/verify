@@ -3,7 +3,7 @@ const admin = require("firebase-admin");
 
 // 1) Import your service account key. 
 // Make sure the path here matches where you've stored it.
-const serviceAccount = require("./serviceAccountKey.json");
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 
 // 2) Initialize the Firebase Admin SDK using the service account.
 admin.initializeApp({

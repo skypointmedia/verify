@@ -9,10 +9,10 @@ interface EmailOptions {
 }
 
 const transporter = nodemailer.createTransport({
-  service: "Gmail", // Replace with your email provider if different
+  service: "Gmail", // Use your email provider
   auth: {
     user: process.env.EMAIL_ACCOUNT,
-    pass: process.env.EMAIL_PASSWORD, // For Gmail, use an App Password
+    pass: process.env.EMAIL_PASSWORD, // For Gmail, consider using an App Password
   },
 });
 

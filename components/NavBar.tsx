@@ -137,13 +137,13 @@ export default function NavBar() {
                             <Menu.Item>
                               {({ active }) => (
                                 <Link
-                                  href="/settings"
+                                  href="/business-request"
                                   className={classNames(
                                     active ? "bg-gray-100" : "",
                                     "block px-4 py-2 text-sm text-gray-700"
                                   )}
                                 >
-                                  Settings
+                                  New Verification Request
                                 </Link>
                               )}
                             </Menu.Item>

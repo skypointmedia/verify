@@ -23,16 +23,18 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Listen for authentication state changes
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
 
-        // Retrieve ID token claims
-        const tokenResult = await currentUser.getIdTokenResult();
-        console.log("Admin Claim:", tokenResult.claims.admin); // Debugging line
-        if (tokenResult.claims.admin) {
-          setIsAdmin(true);
-        } else {
+        try {
+          // Retrieve custom claims for the user
+          const tokenResult = await currentUser.getIdTokenResult();
+          console.log("Admin Claim:", tokenResult.claims.admin); // Debugging line
+          setIsAdmin(!!tokenResult.claims.admin);
+        } catch (error) {
+          console.error("Error fetching ID token claims:", error);
           setIsAdmin(false);
         }
       } else {
@@ -42,7 +44,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       setLoading(false);
     });
 
-    return unsubscribe;
+    // Cleanup listener on unmount
+    return () => unsubscribe();
   }, []);
 
   return (

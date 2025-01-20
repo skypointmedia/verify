@@ -153,7 +153,7 @@ export default function DashboardPage() {
                         {req.createdAt.toDate().toLocaleDateString()}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {req.status}
+                        {req.status.charAt(0).toUpperCase() + req.status.slice(1).toLowerCase()}
                       </td>
                     </tr>
                   ))}

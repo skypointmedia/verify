@@ -167,11 +167,11 @@ export default function BusinessRequestDetailPage() {
               <dd className="mt-1 text-sm">
                 <span
                   className={`inline-flex rounded-full px-2 text-xs font-semibold leading-5 ${
-                    businessRequest.status === "pending"
-                      ? "bg-yellow-100 text-yellow-800"
-                      : businessRequest.status === "approved"
+                    businessRequest.status === "in progress"
                       ? "bg-green-100 text-green-800"
-                      : "bg-red-100 text-red-800"
+                      : businessRequest.status === "more information needed"
+                      ? "bg-yellow-100 text-yellow-800"
+                      : "bg-green-100 text-green-800"
                   }`}
                 >
                   {businessRequest.status.charAt(0).toUpperCase() + businessRequest.status.slice(1)}
@@ -180,7 +180,7 @@ export default function BusinessRequestDetailPage() {
             </div>
 
             {/* Verification Letter (Only if status is 'complete') */}
-            {businessRequest.status === "completed" && (
+            {businessRequest.status === "verified" && (
               <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                 <dt className="text-sm font-medium text-gray-500">Verification Letter</dt>
                 <dd className="mt-1 text-sm text-indigo-600 sm:mt-0 sm:col-span-2">
@@ -203,8 +203,8 @@ export default function BusinessRequestDetailPage() {
           </dl>
         </div>
 
-        {/* Edit Button (Hidden if status is 'complete') */}
-        {businessRequest.status !== "completed" && (
+        {/* Edit Button (Hidden if status is 'verified') */}
+        {businessRequest.status !== "verified" && (
           <div className="px-4 py-4 sm:px-6 text-right">
             <Link
               href={`/business-request/${businessRequest.id}/edit`}

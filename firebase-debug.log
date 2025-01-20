@@ -1,0 +1,103 @@
+[debug] [2025-01-19T21:50:43.173Z] ----------------------------------------------------------------------
+[debug] [2025-01-19T21:50:43.176Z] Command:       /Users/mattsantucci/.asdf/installs/nodejs/20.9.0/bin/node /Users/mattsantucci/.asdf/installs/nodejs/20.9.0/bin/firebase deploy
+[debug] [2025-01-19T21:50:43.176Z] CLI Version:   13.29.1
+[debug] [2025-01-19T21:50:43.176Z] Platform:      darwin
+[debug] [2025-01-19T21:50:43.177Z] Node Version:  v20.9.0
+[debug] [2025-01-19T21:50:43.177Z] Time:          Sun Jan 19 2025 16:50:43 GMT-0500 (Eastern Standard Time)
+[debug] [2025-01-19T21:50:43.177Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-01-19T21:50:43.178Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-01-19T21:50:43.226Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-19T21:50:43.226Z] > authorizing via signed-in user (litfuse.network@gmail.com)
+[debug] [2025-01-19T21:50:43.226Z] [iam] checking project verifymybiz-255d7 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2025-01-19T21:50:43.226Z] Checked if tokens are valid: false, expires at: 1737096965246
+[debug] [2025-01-19T21:50:43.226Z] Checked if tokens are valid: false, expires at: 1737096965246
+[debug] [2025-01-19T21:50:43.226Z] > refreshing access token with scopes: []
+[debug] [2025-01-19T21:50:43.227Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-01-19T21:50:43.227Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-01-19T21:50:43.470Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-01-19T21:50:43.471Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2025-01-19T21:50:43.569Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-01-19T21:50:43.570Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-01-19T21:50:43.580Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/verifymybiz-255d7:testIamPermissions [none]
+[debug] [2025-01-19T21:50:43.580Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/verifymybiz-255d7:testIamPermissions x-goog-quota-user=projects/verifymybiz-255d7
+[debug] [2025-01-19T21:50:43.580Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/verifymybiz-255d7:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2025-01-19T21:50:44.007Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/verifymybiz-255d7:testIamPermissions 200
+[debug] [2025-01-19T21:50:44.007Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/verifymybiz-255d7:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2025-01-19T21:50:44.008Z] Checked if tokens are valid: true, expires at: 1737327042570
+[debug] [2025-01-19T21:50:44.008Z] Checked if tokens are valid: true, expires at: 1737327042570
+[debug] [2025-01-19T21:50:44.008Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/verifymybiz-255d7/serviceAccounts/verifymybiz-255d7@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-01-19T21:50:44.008Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/verifymybiz-255d7/serviceAccounts/verifymybiz-255d7@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-01-19T21:50:44.347Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/verifymybiz-255d7/serviceAccounts/verifymybiz-255d7@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-01-19T21:50:44.348Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/verifymybiz-255d7/serviceAccounts/verifymybiz-255d7@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-01-19T21:50:44.349Z] Checked if tokens are valid: true, expires at: 1737327042570
+[debug] [2025-01-19T21:50:44.349Z] Checked if tokens are valid: true, expires at: 1737327042570
+[debug] [2025-01-19T21:50:44.349Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/verifymybiz-255d7 [none]
+[debug] [2025-01-19T21:50:44.687Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/verifymybiz-255d7 200
+[debug] [2025-01-19T21:50:44.688Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/verifymybiz-255d7 {"projectId":"verifymybiz-255d7","projectNumber":"459023433201","displayName":"VerifyMyBiz","name":"projects/verifymybiz-255d7","resources":{"hostingSite":"verifymybiz-255d7"},"state":"ACTIVE","etag":"1_ea053172-9189-41cd-9a11-6658dac43ee9"}
+[debug] [2025-01-19T21:50:45.579Z] defaultcredentials: writing to file /Users/mattsantucci/.config/firebase/litfuse_network_gmail.com_application_default_credentials.json
+[debug] [2025-01-19T21:50:45.582Z] Checked if tokens are valid: true, expires at: 1737327042570
+[debug] [2025-01-19T21:50:45.582Z] Checked if tokens are valid: true, expires at: 1737327042570
+[debug] [2025-01-19T21:50:45.582Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/verifymybiz-255d7/sites pageToken=&pageSize=10
+[debug] [2025-01-19T21:50:46.186Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/verifymybiz-255d7/sites 200
+[debug] [2025-01-19T21:50:46.186Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/verifymybiz-255d7/sites {"sites":[{"name":"projects/verifymybiz-255d7/sites/verifymybiz-255d7","defaultUrl":"https://verifymybiz-255d7.web.app","appId":"1:459023433201:web:fe32b67b1ed2ef34ba9850","type":"DEFAULT_SITE"}]}
+[debug] [2025-01-19T21:50:46.187Z] Checked if tokens are valid: true, expires at: 1737327042570
+[debug] [2025-01-19T21:50:46.187Z] Checked if tokens are valid: true, expires at: 1737327042570
+[debug] [2025-01-19T21:50:46.187Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:459023433201:web:fe32b67b1ed2ef34ba9850/config [none]
+[debug] [2025-01-19T21:50:46.614Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:459023433201:web:fe32b67b1ed2ef34ba9850/config 200
+[debug] [2025-01-19T21:50:46.614Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:459023433201:web:fe32b67b1ed2ef34ba9850/config {"projectId":"verifymybiz-255d7","appId":"1:459023433201:web:fe32b67b1ed2ef34ba9850","storageBucket":"verifymybiz-255d7.firebasestorage.app","apiKey":"AIzaSyA8JhugI5vnR7M8Vgmj12Sn49wuhWBskEI","authDomain":"verifymybiz-255d7.firebaseapp.com","messagingSenderId":"459023433201","measurementId":"G-NZ61D3HL1F"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-01-19T21:50:48.207Z] Checked if tokens are valid: true, expires at: 1737327042570
+[debug] [2025-01-19T21:50:48.207Z] Checked if tokens are valid: true, expires at: 1737327042570
+[debug] [2025-01-19T21:50:48.207Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/verifymybiz-255d7/sites/verifymybiz-255d7 [none]
+[debug] [2025-01-19T21:50:48.353Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/verifymybiz-255d7/sites/verifymybiz-255d7 200
+[debug] [2025-01-19T21:50:48.353Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/verifymybiz-255d7/sites/verifymybiz-255d7 {"name":"projects/verifymybiz-255d7/sites/verifymybiz-255d7","defaultUrl":"https://verifymybiz-255d7.web.app","appId":"1:459023433201:web:fe32b67b1ed2ef34ba9850","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.1.4
+
+[info]    - Environments: .env.local
+
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info] Failed to compile.
+
+
+[info] ./app/business-request/[id]/edit/page.tsx:65:24
+Type error: No overload matches this call.
+  Overload 1 of 3, '(firestore: Firestore, path: string, ...pathSegments: string[]): DocumentReference<DocumentData, DocumentData>', gave the following error.
+    Argument of type 'string | string[] | undefined' is not assignable to parameter of type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+  Overload 2 of 3, '(reference: CollectionReference<unknown, DocumentData>, path?: string | undefined, ...pathSegments: string[]): DocumentReference<unknown, DocumentData>', gave the following error.
+    Argument of type 'Firestore' is not assignable to parameter of type 'CollectionReference<unknown, DocumentData>'.
+      Type 'Firestore' is missing the following properties from type 'CollectionReference<unknown, DocumentData>': id, path, parent, withConverter, and 2 more.
+  Overload 3 of 3, '(reference: DocumentReference<unknown, DocumentData>, path: string, ...pathSegments: string[]): DocumentReference<DocumentData, DocumentData>', gave the following error.
+    Argument of type 'Firestore' is not assignable to parameter of type 'DocumentReference<unknown, DocumentData>'.
+      Type 'Firestore' is missing the following properties from type 'DocumentReference<unknown, DocumentData>': converter, firestore, id, path, and 2 more.
+
+  63 |     const fetchBusinessRequest = async () => {
+  64 |       try {
+> 65 |         const docRef = doc(db, "businessRequests", id);
+     |                        ^
+  66 |         const docSnap = await getDoc(docRef);
+  67 |
+  68 |         if (docSnap.exists()) {
+
+[info] Static worker exited with code: 1 and signal: null
+
+[debug] [2025-01-19T21:50:54.898Z] Error: ENOENT: no such file or directory, open '/Users/mattsantucci/Projects/verifymybiz/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
